@@ -1,0 +1,183 @@
+Help on ORB object:
+
+class ORB(Feature2D)
+ |  Method resolution order:
+ |      ORB
+ |      Feature2D
+ |      Algorithm
+ |      builtins.object
+ |  
+ |  Methods defined here:
+ |  
+ |  __new__(*args, **kwargs) from builtins.type
+ |      Create and return a new object.  See help(type) for accurate signature.
+ |  
+ |  __repr__(self, /)
+ |      Return repr(self).
+ |  
+ |  getEdgeThreshold(...)
+ |      getEdgeThreshold() -> retval
+ |      .
+ |  
+ |  getFastThreshold(...)
+ |      getFastThreshold() -> retval
+ |      .
+ |  
+ |  getFirstLevel(...)
+ |      getFirstLevel() -> retval
+ |      .
+ |  
+ |  getMaxFeatures(...)
+ |      getMaxFeatures() -> retval
+ |      .
+ |  
+ |  getNLevels(...)
+ |      getNLevels() -> retval
+ |      .
+ |  
+ |  getPatchSize(...)
+ |      getPatchSize() -> retval
+ |      .
+ |  
+ |  getScaleFactor(...)
+ |      getScaleFactor() -> retval
+ |      .
+ |  
+ |  getScoreType(...)
+ |      getScoreType() -> retval
+ |      .
+ |  
+ |  getWTA_K(...)
+ |      getWTA_K() -> retval
+ |      .
+ |  
+ |  setEdgeThreshold(...)
+ |      setEdgeThreshold(edgeThreshold) -> None
+ |      .
+ |  
+ |  setFastThreshold(...)
+ |      setFastThreshold(fastThreshold) -> None
+ |      .
+ |  
+ |  setFirstLevel(...)
+ |      setFirstLevel(firstLevel) -> None
+ |      .
+ |  
+ |  setMaxFeatures(...)
+ |      setMaxFeatures(maxFeatures) -> None
+ |      .
+ |  
+ |  setNLevels(...)
+ |      setNLevels(nlevels) -> None
+ |      .
+ |  
+ |  setPatchSize(...)
+ |      setPatchSize(patchSize) -> None
+ |      .
+ |  
+ |  setScaleFactor(...)
+ |      setScaleFactor(scaleFactor) -> None
+ |      .
+ |  
+ |  setScoreType(...)
+ |      setScoreType(scoreType) -> None
+ |      .
+ |  
+ |  setWTA_K(...)
+ |      setWTA_K(wta_k) -> None
+ |      .
+ |  
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from Feature2D:
+ |  
+ |  compute(...)
+ |      compute(image, keypoints[, descriptors]) -> keypoints, descriptors
+ |      .   @brief Computes the descriptors for a set of keypoints detected in an image (first variant) or image set
+ |      .   (second variant).
+ |      .   
+ |      .   @param image Image.
+ |      .   @param keypoints Input collection of keypoints. Keypoints for which a descriptor cannot be
+ |      .   computed are removed. Sometimes new keypoints can be added, for example: SIFT duplicates keypoint
+ |      .   with several dominant orientations (for each orientation).
+ |      .   @param descriptors Computed descriptors. In the second variant of the method descriptors[i] are
+ |      .   descriptors computed for a keypoints[i]. Row j is the keypoints (or keypoints[i]) is the
+ |      .   descriptor for keypoint j-th keypoint.
+ |      
+ |      
+ |      
+ |      compute(images, keypoints[, descriptors]) -> keypoints, descriptors
+ |      .   @overload
+ |      .   
+ |      .   @param images Image set.
+ |      .   @param keypoints Input collection of keypoints. Keypoints for which a descriptor cannot be
+ |      .   computed are removed. Sometimes new keypoints can be added, for example: SIFT duplicates keypoint
+ |      .   with several dominant orientations (for each orientation).
+ |      .   @param descriptors Computed descriptors. In the second variant of the method descriptors[i] are
+ |      .   descriptors computed for a keypoints[i]. Row j is the keypoints (or keypoints[i]) is the
+ |      .   descriptor for keypoint j-th keypoint.
+ |  
+ |  defaultNorm(...)
+ |      defaultNorm() -> retval
+ |      .
+ |  
+ |  descriptorSize(...)
+ |      descriptorSize() -> retval
+ |      .
+ |  
+ |  descriptorType(...)
+ |      descriptorType() -> retval
+ |      .
+ |  
+ |  detect(...)
+ |      detect(image[, mask]) -> keypoints
+ |      .   @brief Detects keypoints in an image (first variant) or image set (second variant).
+ |      .   
+ |      .   @param image Image.
+ |      .   @param keypoints The detected keypoints. In the second variant of the method keypoints[i] is a set
+ |      .   of keypoints detected in images[i] .
+ |      .   @param mask Mask specifying where to look for keypoints (optional). It must be a 8-bit integer
+ |      .   matrix with non-zero values in the region of interest.
+ |      
+ |      
+ |      
+ |      detect(images[, masks]) -> keypoints
+ |      .   @overload
+ |      .   @param images Image set.
+ |      .   @param keypoints The detected keypoints. In the second variant of the method keypoints[i] is a set
+ |      .   of keypoints detected in images[i] .
+ |      .   @param masks Masks for each input image specifying where to look for keypoints (optional).
+ |      .   masks[i] is a mask for images[i].
+ |  
+ |  detectAndCompute(...)
+ |      detectAndCompute(image, mask[, descriptors[, useProvidedKeypoints]]) -> keypoints, descriptors
+ |      .   Detects keypoints and computes the descriptors
+ |  
+ |  empty(...)
+ |      empty() -> retval
+ |      .
+ |  
+ |  read(...)
+ |      read(fileName) -> None
+ |      .
+ |  
+ |  write(...)
+ |      write(fileName) -> None
+ |      .
+ |  
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from Algorithm:
+ |  
+ |  clear(...)
+ |      clear() -> None
+ |      .   @brief Clears the algorithm state
+ |  
+ |  getDefaultName(...)
+ |      getDefaultName() -> retval
+ |      .   Returns the algorithm string identifier.
+ |      .   This string is used as top level xml/yml node tag when the object is saved to a file or string.
+ |  
+ |  save(...)
+ |      save(filename) -> None
+ |      .   Saves the algorithm to a file.
+ |      .   In order to make this method work, the derived class must implement Algorithm::write(FileStorage& fs).
+
